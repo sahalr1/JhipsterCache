@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.myapp</groupId>
-    <artifactId>ehcache-no-hib</artifactId>
+    <artifactId>ehcache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Ehcache No Hib</name>
+    <name>Ehcache</name>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
@@ -162,6 +162,10 @@
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -620,7 +624,7 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>ehcachenohib:latest</image>
+                            <image>ehcache:latest</image>
                         </to>
                         <container>
                             <entrypoint>
@@ -656,8 +660,8 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>com.mysql.cj.jdbc.Driver</driver>
-                        <url>jdbc:mysql://localhost:3306/ehcacheNoHib</url>
-                        <defaultSchemaName>ehcacheNoHib</defaultSchemaName>
+                        <url>jdbc:mysql://localhost:3306/ehcache</url>
+                        <defaultSchemaName>ehcache</defaultSchemaName>
                         <username>root</username>
                         <password></password>
                         <referenceUrl>hibernate:spring:com.mycompany.myapp.domain?dialect=org.hibernate.dialect.MySQL8Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>

@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.EhcacheNoHibApp;
+import com.mycompany.myapp.EhcacheApp;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link LogoutResource} REST controller.
  */
-@SpringBootTest(classes = {EhcacheNoHibApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {EhcacheApp.class, TestSecurityConfiguration.class})
 public class LogoutResourceIT {
 
     @Autowired

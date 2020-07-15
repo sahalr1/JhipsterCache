@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.EhcacheNoHibApp;
+import com.mycompany.myapp.EhcacheApp;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import com.mycompany.myapp.domain.PersistentAuditEvent;
 import com.mycompany.myapp.repository.PersistenceAuditEventRepository;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = {EhcacheNoHibApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {EhcacheApp.class, TestSecurityConfiguration.class})
 @Transactional
 public class AuditResourceIT {
 

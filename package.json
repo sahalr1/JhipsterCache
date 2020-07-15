@@ -1,7 +1,7 @@
 {
-  "name": "ehcache-no-hib",
+  "name": "ehcache",
   "version": "0.0.0",
-  "description": "Description for ehcacheNoHib",
+  "description": "Description for ehcache",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

@@ -1,30 +1,30 @@
 version: '2'
 services:
-  ehcachenohib-app:
-    image: ehcachenohib
+  ehcache-app:
+    image: ehcache
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATASOURCE_URL=jdbc:mysql://ehcachenohib-mysql:3306/ehcachenohib?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://ehcache-mysql:3306/ehcache?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
       - SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://keycloak:9080/auth/realms/jhipster
       - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID=web_app
       - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET=web_app
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-      - SPRING_DATA_JEST_URI=http://ehcachenohib-elasticsearch:9200
-      - SPRING_ELASTICSEARCH_REST_URIS=http://ehcachenohib-elasticsearch:9200
+      - SPRING_DATA_JEST_URI=http://ehcache-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://ehcache-elasticsearch:9200
     ports:
       - 8080:8080
-  ehcachenohib-mysql:
+  ehcache-mysql:
     extends:
       file: mysql.yml
-      service: ehcachenohib-mysql
-  ehcachenohib-elasticsearch:
+      service: ehcache-mysql
+  ehcache-elasticsearch:
     extends:
       file: elasticsearch.yml
-      service: ehcachenohib-elasticsearch
+      service: ehcache-elasticsearch
   jhipster-registry:
     extends:
       file: jhipster-registry.yml
