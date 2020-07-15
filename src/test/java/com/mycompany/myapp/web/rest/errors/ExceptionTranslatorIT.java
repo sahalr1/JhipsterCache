@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest.errors;
 
-import com.mycompany.myapp.HazelcastNoHibApp;
+import com.mycompany.myapp.HazelcastApp;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @WithMockUser
 @AutoConfigureMockMvc
-@SpringBootTest(classes = {HazelcastNoHibApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {HazelcastApp.class, TestSecurityConfiguration.class})
 public class ExceptionTranslatorIT {
 
     @Autowired

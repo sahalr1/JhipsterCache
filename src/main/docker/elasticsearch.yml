@@ -1,9 +1,9 @@
 version: '2'
 services:
-  hazelcastnohib-elasticsearch:
+  hazelcast-elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.8.8
     # volumes:
-    #     - ~/volumes/jhipster/hazelcastNoHib/elasticsearch/:/usr/share/elasticsearch/data/
+    #     - ~/volumes/jhipster/hazelcast/elasticsearch/:/usr/share/elasticsearch/data/
     ports:
       - 9200:9200
       - 9300:9300

@@ -1,6 +1,6 @@
 package com.mycompany.myapp.config.timezone;
 
-import com.mycompany.myapp.HazelcastNoHibApp;
+import com.mycompany.myapp.HazelcastApp;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import com.mycompany.myapp.repository.timezone.DateTimeWrapper;
 import com.mycompany.myapp.repository.timezone.DateTimeWrapperRepository;
@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for the ZoneId Hibernate configuration.
  */
-@SpringBootTest(classes = {HazelcastNoHibApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {HazelcastApp.class, TestSecurityConfiguration.class})
 public class HibernateTimeZoneIT {
 
     @Autowired

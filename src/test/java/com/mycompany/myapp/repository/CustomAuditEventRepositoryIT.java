@@ -1,6 +1,6 @@
 package com.mycompany.myapp.repository;
 
-import com.mycompany.myapp.HazelcastNoHibApp;
+import com.mycompany.myapp.HazelcastApp;
 
 import com.mycompany.myapp.config.Constants;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
@@ -29,7 +29,7 @@ import static com.mycompany.myapp.repository.CustomAuditEventRepository.EVENT_DA
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = {HazelcastNoHibApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {HazelcastApp.class, TestSecurityConfiguration.class})
 @Transactional
 public class CustomAuditEventRepositoryIT {
 

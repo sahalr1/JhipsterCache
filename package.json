@@ -1,7 +1,7 @@
 {
-  "name": "hazelcast-no-hib",
+  "name": "hazelcast",
   "version": "0.0.0",
-  "description": "Description for hazelcastNoHib",
+  "description": "Description for hazelcast",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
