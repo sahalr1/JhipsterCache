@@ -1,7 +1,7 @@
 {
-  "name": "ehcache",
+  "name": "hazelcast-no-hib",
   "version": "0.0.0",
-  "description": "Description for ehcache",
+  "description": "Description for hazelcastNoHib",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

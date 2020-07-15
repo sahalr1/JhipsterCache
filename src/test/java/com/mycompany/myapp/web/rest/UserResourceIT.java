@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.EhcacheApp;
+import com.mycompany.myapp.HazelcastNoHibApp;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import com.mycompany.myapp.domain.Authority;
 import com.mycompany.myapp.domain.User;
@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = {EhcacheApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {HazelcastNoHibApp.class, TestSecurityConfiguration.class})
 public class UserResourceIT {
 
     private static final String DEFAULT_LOGIN = "johndoe";

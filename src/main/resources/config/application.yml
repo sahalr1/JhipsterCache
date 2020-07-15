@@ -24,8 +24,8 @@ eureka:
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
-    appname: ehcache
-    instanceId: ehcache:${spring.application.instance-id:${random.value}}
+    appname: hazelcastnohib
+    instanceId: hazelcastnohib:${spring.application.instance-id:${random.value}}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
     status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -106,7 +106,7 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration
   application:
-    name: ehcache
+    name: hazelcastNoHib
   jmx:
     enabled: false
   data:
@@ -119,7 +119,7 @@ spring:
       hibernate.jdbc.time_zone: UTC
       hibernate.id.new_generator_mappings: true
       hibernate.connection.provider_disables_autocommit: true
-      hibernate.cache.use_second_level_cache: true
+      hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
       # modify batch size as necessary
@@ -139,13 +139,13 @@ spring:
     allow-bean-definition-overriding: true
   task:
     execution:
-      thread-name-prefix: ehcache-task-
+      thread-name-prefix: hazelcast-no-hib-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: ehcache-scheduling-
+      thread-name-prefix: hazelcast-no-hib-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -183,7 +183,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'ehcacheApp'
+    name: 'hazelcastNoHibApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
@@ -193,11 +193,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: ehcache@localhost
+    from: hazelcastNoHib@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: ehcache API
-    description: ehcache API documentation
+    title: hazelcastNoHib API
+    description: hazelcastNoHib API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

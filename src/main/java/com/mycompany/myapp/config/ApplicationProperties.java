@@ -3,7 +3,7 @@ package com.mycompany.myapp.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Ehcache.
+ * Properties specific to Hazelcast No Hib.
  * <p>
  * Properties are configured in the {@code application.yml} file.
  * See {@link io.github.jhipster.config.JHipsterProperties} for a good example.

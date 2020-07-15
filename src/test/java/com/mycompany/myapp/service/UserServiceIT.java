@@ -1,6 +1,6 @@
 package com.mycompany.myapp.service;
 
-import com.mycompany.myapp.EhcacheApp;
+import com.mycompany.myapp.HazelcastNoHibApp;
 import com.mycompany.myapp.config.Constants;
 import com.mycompany.myapp.config.TestSecurityConfiguration;
 import com.mycompany.myapp.domain.User;
@@ -36,7 +36,7 @@ import static org.mockito.Mockito.verify;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = {EhcacheApp.class, TestSecurityConfiguration.class})
+@SpringBootTest(classes = {HazelcastNoHibApp.class, TestSecurityConfiguration.class})
 @Transactional
 public class UserServiceIT {
 
